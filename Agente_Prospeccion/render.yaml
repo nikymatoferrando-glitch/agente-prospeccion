@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: ia-viva-agente-prospeccion
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    autoDeploy: false
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "true"
